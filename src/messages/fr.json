@@ -1,0 +1,15 @@
+{
+  "Index": {
+    "home": "Accueil",
+    "store": "Store",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact",
+    "header_welcome": "BIENVENUE À YRSHOP",
+    "header_title": "produits de beauté",
+    "header_description": "Visitez notre site web dès aujourd'hui pour découvrir notre gamme de produits de beauté et trouver ceux qui vous conviennent le mieux.",
+    "masque_visage": "masque de visage",
+    "palette_maquillage": "palette de maquillage",
+    "acheter_btn": "Achetez maintenant"
+  }
+}
