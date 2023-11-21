@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import NavEnd from "./NavEnd";
 import NavStart from "./NavStart";
 import Logo from "../../../public/images/yrshop.png";
+import NavPhone from "./NavPhone";
 
 const Navbar = () => {
   const t = useTranslations("Index");
@@ -20,6 +21,13 @@ const Navbar = () => {
         <Image src={Logo} width={150} className="ms-[-50px]" alt="Logo" />
         <NavEnd />
       </nav>
+      <NavPhone
+        home={t("home")}
+        store={t("store")}
+        blog={t("blog")}
+        about={t("about")}
+        contact={t("contact")}
+      />
     </>
   );
 };

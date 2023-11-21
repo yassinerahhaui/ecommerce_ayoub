@@ -2,3 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.text-shadow {
+  text-shadow: 0 0 .2rem #141414d5, 0 0 .2rem #141414de;
+}
+.text-shadow-md-none {
+  @media(min-width: 768px) {
+    text-shadow: none !important;
+  }
+}
