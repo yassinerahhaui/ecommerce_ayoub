@@ -21,12 +21,20 @@ const NavEnd = () => {
           </button>
           <ul className="hidden z-30 font-medium group-hover:block absolute left-1/2 translate-x-[-50%] bottom-[-200%] bg-gray-50">
             <li className="h-8 flex justify-center items-center w-24 border-b border-gray-200">
-              <Link href={pathname} locale="fr">
+              <Link
+                href={pathname}
+                locale="fr"
+                onClick={() => localStorage.setItem("language", "fr")}
+              >
                 Française
               </Link>
             </li>
             <li className="h-8 flex justify-center items-center w-24">
-              <Link href={pathname} locale="ar">
+              <Link
+                href={pathname}
+                locale="ar"
+                onClick={() => localStorage.setItem("language", "ar")}
+              >
                 العربية
               </Link>
             </li>
@@ -38,10 +46,22 @@ const NavEnd = () => {
           </button>
 
           <ul className="hidden z-30 font-medium group-hover:block absolute left-1/2 translate-x-[-50%] bottom-[-200%] bg-gray-50">
-            <li className="h-8 flex justify-center items-center w-24 cursor-pointer border-b border-gray-200">
+            <li
+              className="h-8 flex justify-center items-center w-24 cursor-pointer border-b border-gray-200"
+              onClick={() => {
+                localStorage.setItem("currency", "mad");
+                window.location.reload();
+              }}
+            >
               MAD
             </li>
-            <li className="h-8 flex justify-center items-center w-24 cursor-pointer">
+            <li
+              className="h-8 flex justify-center items-center w-24 cursor-pointer"
+              onClick={() => {
+                localStorage.setItem("currency", "eur");
+                window.location.reload();
+              }}
+            >
               EUR
             </li>
           </ul>

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
-import { Markazi_Text } from "next/font/google";
+import { Poppins, Markazi_Text } from "next/font/google";
 import Navbar from "@/components/Navigation/Navbar";
 import { notFound } from "next/navigation";
 import "./globals.css";
+import LanguageDefault from "@/elements/LanguageDefault";
 
 const inter = Poppins({
   subsets: ["latin"],
@@ -41,6 +41,7 @@ export default function RootLayout({
         } overflow-x-hidden w-full`}
       >
         <Navbar />
+        <LanguageDefault />
         {children}
       </body>
     </html>

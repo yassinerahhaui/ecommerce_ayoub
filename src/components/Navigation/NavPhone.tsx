@@ -41,7 +41,7 @@ const NavPhone = (props: Pages) => {
         }`}
       >
         <button
-          className="text-2xl py-1 px-3 ms-auto rounded-md bg-red-700 font-bold"
+          className="text-2xl py-1 px-3 ms-auto rounded-md cursor-pointer select-none bg-red-700 font-bold"
           onClick={() => setShowList(false)}
         >
           x
@@ -75,6 +75,7 @@ const NavPhone = (props: Pages) => {
                 onClick={() => {
                   setShowLang(false);
                   setShowList(false);
+                  localStorage.setItem("language", "fr");
                 }}
               >
                 <li className="text-xl text-center border-b border-gray-500 font-medium py-2">
@@ -87,6 +88,7 @@ const NavPhone = (props: Pages) => {
                 onClick={() => {
                   setShowLang(false);
                   setShowList(false);
+                  localStorage.setItem("language", "ar");
                 }}
               >
                 <li className="text-xl text-center font-medium py-2">
@@ -98,9 +100,9 @@ const NavPhone = (props: Pages) => {
           <li className="my-2">
             <button
               className="text-4xl pb-2 font-medium"
-              onClick={() =>
-                currency === false ? setCurrency(true) : setCurrency(false)
-              }
+              onClick={() => {
+                currency === false ? setCurrency(true) : setCurrency(false);
+              }}
             >
               <FcCurrencyExchange />
             </button>
@@ -115,6 +117,8 @@ const NavPhone = (props: Pages) => {
                 onClick={() => {
                   setCurrency(false);
                   setShowList(false);
+                  localStorage.setItem("currency", "eur");
+                  window.location.reload();
                 }}
                 className="text-xl text-center cursor-pointer border-b border-gray-500 font-medium py-2"
               >
@@ -124,6 +128,8 @@ const NavPhone = (props: Pages) => {
                 onClick={() => {
                   setCurrency(false);
                   setShowList(false);
+                  localStorage.setItem("currency", "mad");
+                  window.location.reload();
                 }}
                 className="text-xl text-center cursor-pointer font-medium py-2"
               >
