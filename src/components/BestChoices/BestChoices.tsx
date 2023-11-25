@@ -11,6 +11,8 @@ import img5 from "@/assets/images/products/05.jpg";
 import img6 from "@/assets/images/products/06.jpg";
 import img7 from "@/assets/images/products/07.jpg";
 import img8 from "@/assets/images/products/08.jpg";
+import img9 from "@/assets/images/products/09.jpg";
+import img10 from "@/assets/images/products/10.jpg";
 import Image from "next/image";
 import Link from "next-intl/link";
 interface Title {
@@ -103,6 +105,26 @@ const products = [
     sale: true,
     in_stock: true,
     image: img8,
+  },
+  {
+    id: 9,
+    name_fr: "produit numero 9",
+    name_ar: "المنتج رقم 9",
+    price: 15,
+    old_price: 27.99,
+    sale: true,
+    in_stock: true,
+    image: img9,
+  },
+  {
+    id: 10,
+    name_fr: "produit numero 10",
+    name_ar: "المنتج رقم 10",
+    price: 30,
+    old_price: 40,
+    sale: true,
+    in_stock: true,
+    image: img10,
   },
 ];
 const BestChoices = ({
