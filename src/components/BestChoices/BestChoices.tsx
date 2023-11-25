@@ -2,6 +2,17 @@
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { currency, language } from "@/elements/GlobalFunc";
+import img1 from "@/assets/images/products/01.jpg";
+import img2 from "@/assets/images/products/02.jpg";
+import img3 from "@/assets/images/products/03.jpg";
+import img4 from "@/assets/images/products/04.jpg";
+import img5 from "@/assets/images/products/05.jpg";
+import img6 from "@/assets/images/products/06.jpg";
+import img7 from "@/assets/images/products/07.jpg";
+import img8 from "@/assets/images/products/08.jpg";
+import Image from "next/image";
+import Link from "next-intl/link";
 interface Title {
   best_choices: string;
   popular_products: string;
@@ -10,7 +21,88 @@ const headerVariant = {
   startIn: { scale: 0, y: 100, opacity: 0 },
   animateTo: { scale: 1, y: 0, opacity: 1, transition: { duration: 1 } },
 };
-const products = [];
+const products = [
+  {
+    id: 1,
+    name_fr: "produit numero 1",
+    name_ar: "المنتج رقم 1",
+    price: 40,
+    old_price: 45,
+    sale: true,
+    in_stock: true,
+    image: img1,
+  },
+  {
+    id: 2,
+    name_fr: "produit numero 2",
+    name_ar: "المنتج رقم 2",
+    price: 99.99,
+    old_price: 250,
+    sale: true,
+    in_stock: true,
+    image: img2,
+  },
+  {
+    id: 3,
+    name_fr: "produit numero 3",
+    name_ar: "المنتج رقم 3",
+    price: 22.5,
+    old_price: 45.99,
+    sale: true,
+    in_stock: true,
+    image: img3,
+  },
+  {
+    id: 4,
+    name_fr: "produit numero 4",
+    name_ar: "المنتج رقم 4",
+    price: 9,
+    old_price: 15,
+    sale: true,
+    in_stock: true,
+    image: img4,
+  },
+  {
+    id: 5,
+    name_fr: "produit numero 5",
+    name_ar: "المنتج رقم 5",
+    price: 12.35,
+    old_price: 65,
+    sale: true,
+    in_stock: true,
+    image: img5,
+  },
+  {
+    id: 6,
+    name_fr: "produit numero 6",
+    name_ar: "المنتج رقم 6",
+    price: 16.5,
+    old_price: 45,
+    sale: true,
+    in_stock: true,
+    image: img6,
+  },
+  {
+    id: 7,
+    name_fr: "produit numero 7",
+    name_ar: "المنتج رقم 7",
+    price: 15,
+    old_price: 27.99,
+    sale: true,
+    in_stock: true,
+    image: img7,
+  },
+  {
+    id: 8,
+    name_fr: "produit numero 8",
+    name_ar: "المنتج رقم 8",
+    price: 30,
+    old_price: 40,
+    sale: true,
+    in_stock: true,
+    image: img8,
+  },
+];
 const BestChoices = ({ best_choices, popular_products }: Title) => {
   const controlers = useAnimation();
   const [ref, inView] = useInView();
@@ -47,6 +139,37 @@ const BestChoices = ({ best_choices, popular_products }: Title) => {
         >
           {popular_products}
         </motion.h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 py-4 px-6 md:px-20">
+          {products.map((pr) => {
+            if (pr.in_stock) {
+              return (
+                <div key={pr.id} className="">
+                  <Link href={`/store/${pr.id}`}>
+                    <div className="w-full h-80 sm:h-64 overflow-hidden">
+                      <Image
+                        src={pr.image}
+                        alt={language(pr.name_fr, pr.name_ar)}
+                        className="w-full h-80 sm:h-64 rounded scale-100 object-cover object-center hover:scale-105 transition-all ease-in-out duration-1000"
+                      />
+                      {pr.sale ? <span className=""></span> : ""}
+                    </div>
+                    <div className="text-center">
+                      <h3 className="text-lg font-semibold text-gray-900 my-2">
+                        {language(pr.name_fr, pr.name_ar)}
+                      </h3>
+                      <h4 className="text-md text-gray-500 font-medium mb-2">
+                        {currency(`${pr.price}`)}
+                      </h4>
+                    </div>
+                  </Link>
+                  <button className="border-b mx-auto block border-gray-500 text-gray-500 hover:text-gray-800 hover:border-gray-800 text-md font-medium cursor-pointer select-none">
+                    ADD TO CART
+                  </button>
+                </div>
+              );
+            }
+          })}
+        </div>
       </section>
     </>
   );
