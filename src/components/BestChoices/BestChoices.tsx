@@ -32,7 +32,7 @@ const products = [
     name_ar: "المنتج رقم 1",
     price: 40,
     old_price: 45,
-    sale: true,
+    sale: false,
     in_stock: true,
     image: img1,
   },
@@ -186,6 +186,13 @@ const BestChoices = ({
                         {language(pr.name_fr, pr.name_ar)}
                       </h3>
                       <h4 className="text-md text-gray-500 font-medium mb-2">
+                        {pr.sale ? (
+                          <span className="line-through text-gray-400">
+                            {currency(`${pr.old_price}`)}
+                          </span>
+                        ) : (
+                          ""
+                        )}{" "}
                         {currency(`${pr.price}`)}
                       </h4>
                     </div>
