@@ -12,6 +12,7 @@ export default function Home() {
       <BestChoices
         best_choices={t("best_choices")}
         popular_products={t("popular_products")}
+        add_to_cart={t("add_to_cart")}
       />
     </main>
   );

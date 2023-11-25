@@ -16,11 +16,13 @@ import Link from "next-intl/link";
 interface Title {
   best_choices: string;
   popular_products: string;
+  add_to_cart: string;
 }
 const headerVariant = {
   startIn: { scale: 0, y: 100, opacity: 0 },
   animateTo: { scale: 1, y: 0, opacity: 1, transition: { duration: 1 } },
 };
+
 const products = [
   {
     id: 1,
@@ -103,7 +105,11 @@ const products = [
     image: img8,
   },
 ];
-const BestChoices = ({ best_choices, popular_products }: Title) => {
+const BestChoices = ({
+  best_choices,
+  popular_products,
+  add_to_cart,
+}: Title) => {
   const controlers = useAnimation();
   const [ref, inView] = useInView();
   useEffect(() => {
@@ -139,17 +145,17 @@ const BestChoices = ({ best_choices, popular_products }: Title) => {
         >
           {popular_products}
         </motion.h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 py-4 px-6 md:px-20">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-10 py-4 px-6 md:px-20">
           {products.map((pr) => {
             if (pr.in_stock) {
               return (
                 <div key={pr.id} className="">
                   <Link href={`/store/${pr.id}`}>
-                    <div className="w-full h-80 sm:h-64 overflow-hidden">
+                    <div className="w-full rounded h-48 sm:h-64 overflow-hidden">
                       <Image
                         src={pr.image}
                         alt={language(pr.name_fr, pr.name_ar)}
-                        className="w-full h-80 sm:h-64 rounded scale-100 object-cover object-center hover:scale-105 transition-all ease-in-out duration-1000"
+                        className="w-full h-48 sm:h-64 rounded scale-100 object-cover object-center hover:scale-105 transition-all ease-in-out duration-1000"
                       />
                       {pr.sale ? <span className=""></span> : ""}
                     </div>
@@ -162,8 +168,8 @@ const BestChoices = ({ best_choices, popular_products }: Title) => {
                       </h4>
                     </div>
                   </Link>
-                  <button className="border-b mx-auto block border-gray-500 text-gray-500 hover:text-gray-800 hover:border-gray-800 text-md font-medium cursor-pointer select-none">
-                    ADD TO CART
+                  <button className="border-b mx-auto block border-gray-500 text-gray-500 hover:text-gray-800 hover:border-gray-800 text-sm sm:text-md font-medium cursor-pointer select-none">
+                    {add_to_cart}
                   </button>
                 </div>
               );
