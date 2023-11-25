@@ -19,6 +19,7 @@ interface Title {
   best_choices: string;
   popular_products: string;
   add_to_cart: string;
+  sale: string;
 }
 const headerVariant = {
   startIn: { scale: 0, y: 100, opacity: 0 },
@@ -131,6 +132,7 @@ const BestChoices = ({
   best_choices,
   popular_products,
   add_to_cart,
+  sale,
 }: Title) => {
   const controlers = useAnimation();
   const [ref, inView] = useInView();
@@ -171,15 +173,21 @@ const BestChoices = ({
           {products.map((pr) => {
             if (pr.in_stock) {
               return (
-                <div key={pr.id} className="">
+                <div key={pr.id} className="relative">
                   <Link href={`/store/${pr.id}`}>
-                    <div className="w-full rounded h-48 sm:h-64 overflow-hidden">
+                    {pr.sale ? (
+                      <span className="absolute z-10 text-xs font-bold top-[-10px] right-[-10px] text-white bg-gray-600 rounded-full p-2">
+                        {sale}
+                      </span>
+                    ) : (
+                      ""
+                    )}
+                    <div className="w-full z-0 rounded h-48 sm:h-64 overflow-hidden">
                       <Image
                         src={pr.image}
                         alt={language(pr.name_fr, pr.name_ar)}
                         className="w-full h-48 sm:h-64 rounded scale-100 object-cover object-center hover:scale-105 transition-all ease-in-out duration-1000"
                       />
-                      {pr.sale ? <span className=""></span> : ""}
                     </div>
                     <div className="text-center">
                       <h3 className="text-lg font-semibold text-gray-900 my-2">
