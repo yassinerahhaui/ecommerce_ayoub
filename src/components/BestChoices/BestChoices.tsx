@@ -195,7 +195,7 @@ const BestChoices = ({
                       </h3>
                       <h4 className="text-md text-gray-500 font-medium mb-2">
                         {pr.sale ? (
-                          <span className="line-through text-gray-400">
+                          <span className="line-through font-normal text-gray-400">
                             {currency(`${pr.old_price}`)}
                           </span>
                         ) : (
