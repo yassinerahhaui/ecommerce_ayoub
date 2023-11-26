@@ -2,7 +2,7 @@
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-import { currency, language } from "@/elements/GlobalFunc";
+import ProductCard from "../ProductCard/ProductCard";
 import img1 from "@/assets/images/products/01.jpg";
 import img2 from "@/assets/images/products/02.jpg";
 import img3 from "@/assets/images/products/03.jpg";
@@ -173,42 +173,12 @@ const BestChoices = ({
           {products.map((pr) => {
             if (pr.in_stock) {
               return (
-                <div key={pr.id} className="relative">
-                  <Link href={`/store/${pr.id}`}>
-                    {pr.sale ? (
-                      <span className="absolute z-10 text-xs font-bold top-[-10px] right-[-10px] text-white bg-gray-600 rounded-full p-2">
-                        {sale}
-                      </span>
-                    ) : (
-                      ""
-                    )}
-                    <div className="w-full z-0 rounded h-48 sm:h-64 overflow-hidden">
-                      <Image
-                        src={pr.image}
-                        alt={language(pr.name_fr, pr.name_ar)}
-                        className="w-full h-48 sm:h-64 rounded scale-100 object-cover object-center hover:scale-105 transition-all ease-in-out duration-1000"
-                      />
-                    </div>
-                    <div className="text-center">
-                      <h3 className="text-lg font-semibold text-gray-900 my-2">
-                        {language(pr.name_fr, pr.name_ar)}
-                      </h3>
-                      <h4 className="text-md text-gray-500 font-medium mb-2">
-                        {pr.sale ? (
-                          <span className="line-through font-normal text-gray-400">
-                            {currency(`${pr.old_price}`)}
-                          </span>
-                        ) : (
-                          ""
-                        )}{" "}
-                        {currency(`${pr.price}`)}
-                      </h4>
-                    </div>
-                  </Link>
-                  <button className="border-b mx-auto block border-gray-500 text-gray-500 hover:text-gray-800 hover:border-gray-800 text-sm sm:text-md font-medium cursor-pointer select-none">
-                    {add_to_cart}
-                  </button>
-                </div>
+                <ProductCard
+                  key={pr.id}
+                  data={pr}
+                  add_to_cart={add_to_cart}
+                  sale={sale}
+                />
               );
             }
           })}
