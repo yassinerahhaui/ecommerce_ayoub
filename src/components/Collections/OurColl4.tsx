@@ -24,7 +24,7 @@ const box1Variant = {
 };
 const box2Variant = {
   startIn: { x: -200, opacity: 0 },
-  animateTo: { y: 0, opacity: 1, transition: { duration: 1 } },
+  animateTo: { x: 0, opacity: 1, transition: { duration: 1 } },
 };
 const imgVariant = {
   startIn: { x: -200, opacity: 0 },
