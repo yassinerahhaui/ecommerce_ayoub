@@ -23,7 +23,7 @@ const box1Variant = {
   animateTo: { x: 0, opacity: 1, transition: { duration: 1 } },
 };
 const box2Variant = {
-  startIn: { y: 150, opacity: 0 },
+  startIn: { x: -200, opacity: 0 },
   animateTo: { y: 0, opacity: 1, transition: { duration: 1 } },
 };
 const imgVariant = {
