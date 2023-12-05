@@ -10,7 +10,7 @@ const OurCollections = () => {
   return (
     <section className="mb-16">
       <OurCollHeader />
-      <div className="mb-10">
+      <div className="mb-10 w-full overflow-hidden">
         <OurColl1 browse_all={t("browse_all")} />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 md:px-20 my-6">
           <OurColl2 view_more={t("view_more")} />
