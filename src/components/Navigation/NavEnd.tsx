@@ -7,7 +7,7 @@ import { FaSearch } from "react-icons/fa";
 import { HiOutlineMenu } from "react-icons/hi";
 import { usePathname } from "next-intl/client";
 
-const NavEnd = () => {
+const NavEnd = ({ search }: { search: string }) => {
   const [list, setList] = useState(false);
   const [searchBar, setSearchBar] = useState(false);
   const pathname = usePathname();
@@ -89,11 +89,28 @@ const NavEnd = () => {
         onClick={() => setList(false)}
       ></div>
       <div
-        className={`fixed top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] transition-all ease-in-out duration-500 z-40 bg-[#000000d8] ${
+        className={`fixed top-[50%] left-[50%] overflow-hidden transform translate-x-[-50%] translate-y-[-50%] transition-all ease-in-out duration-500 z-40 bg-[#000000d8] ${
           searchBar === true ? `w-full h-full` : `w-0 h-0`
         }`}
         onClick={() => setSearchBar(false)}
       ></div>
+      <form
+        action=""
+        className={`p-2 fixed top-[50%] left-[50%] overflow-hidden transform translate-x-[-50%] translate-y-[-50%] transition-all ease-in-out duration-500 z-50 ${
+          searchBar === true ? `w-full h-max block` : `w-0 hidden`
+        }`}
+        method="get"
+      >
+        <input
+          type="search"
+          placeholder={search}
+          className={`p-4 mx-auto text-white block focus:outline-none text-center text-2xl placeholder:text-2xl placeholder:font-semibold font-semibold bg-transparent border-b border-white rounded z-[51] ${
+            searchBar === true ? `w-[90%] sm:w-[80%] select-auto` : `w-0`
+          }`}
+          name="search"
+          autoFocus={searchBar === true ? true : false}
+        />
+      </form>
     </>
   );
 };

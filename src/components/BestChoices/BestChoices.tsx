@@ -143,7 +143,7 @@ const BestChoices = ({
   }, [controlers, inView]);
   return (
     <>
-      <section className="mb-32">
+      <section className="mb-16">
         <motion.div
           ref={ref}
           initial="startIn"

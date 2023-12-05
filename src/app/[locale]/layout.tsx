@@ -39,6 +39,7 @@ export default function RootLayout({
         className={`${
           locale === "fr" ? markazi.className : markazi.className
         } overflow-x-hidden w-full`}
+        dir={locale === "ar" ? "rtl" : "ltr"}
       >
         <Navbar />
         <LanguageDefault />

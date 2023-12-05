@@ -19,7 +19,7 @@ const Navbar = () => {
           contact={t("contact")}
         />
         <Image src={Logo} width={150} className="ms-[-50px]" alt="Logo" />
-        <NavEnd />
+        <NavEnd search={t("search")} />
       </nav>
       <NavPhone
         home={t("home")}

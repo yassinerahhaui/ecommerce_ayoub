@@ -9,7 +9,7 @@ export const language = (fr: string, ar: string) => {
 };
 export const currency = (prix: string) => {
   if (localStorage.getItem("currency") === "eur") {
-    return `${prix}€`;
+    return `€${prix}`;
   } else {
     let mylang;
     localStorage.getItem("language") === "fr"

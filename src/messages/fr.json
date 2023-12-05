@@ -16,6 +16,9 @@
     "best_choices": "MEILLEURS CHOIX",
     "popular_products": "Produits Populaires",
     "add_to_cart": "AJOUTER AU PANIER",
-    "sale": "SOLDE"
+    "sale": "SOLDE",
+    "search": "Recherche",
+    "browse_all": "PARCOURIR TOUT",
+    "view_more": "VOIR PLUS"
   }
 }
