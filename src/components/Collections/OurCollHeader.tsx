@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useTranslations } from "next-intl";
 
 const h5_variant = {
   startIn: { y: 100, opacity: 0 },
@@ -13,6 +14,7 @@ const h3_variant = {
 };
 
 const OurCollHeader = () => {
+  const t = useTranslations("Index");
   const controllers = useAnimation();
   const [ref, inView] = useInView();
   const controllers1 = useAnimation();
@@ -43,7 +45,7 @@ const OurCollHeader = () => {
         variants={h5_variant}
         className="text-center text-md font-bold text-primary"
       >
-        BEST COLLECTIONS
+        {t("best_collection")}
       </motion.h5>
       <motion.h3
         ref={ref1}
@@ -52,7 +54,7 @@ const OurCollHeader = () => {
         variants={h3_variant}
         className="text-center text-5xl font-bold my-4"
       >
-        Our Collection
+        {t("our_collection")}
       </motion.h3>
     </header>
   );
