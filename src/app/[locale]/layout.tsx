@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import "./globals.css";
 import LanguageDefault from "@/elements/LanguageDefault";
 
-const inter = Poppins({
+const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
@@ -37,7 +37,7 @@ export default function RootLayout({
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <body
         className={`${
-          locale === "fr" ? markazi.className : markazi.className
+          locale === "fr" ? poppins.className : markazi.className
         } overflow-x-hidden w-full`}
         dir={locale === "ar" ? "rtl" : "ltr"}
       >

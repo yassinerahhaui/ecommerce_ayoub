@@ -3,6 +3,7 @@ import Header from "@/components/Header/Header";
 import BestChoices from "@/components/BestChoices/BestChoices";
 import { useTranslations } from "next-intl";
 import OurCollections from "@/components/Collections/OurCollections";
+import Newsletter from "@/components/Newsletter/Newsletter";
 
 export default function Home() {
   const t = useTranslations("Index");
@@ -17,6 +18,7 @@ export default function Home() {
         sale={t("sale")}
       />
       <OurCollections />
+      <Newsletter />
     </main>
   );
 }
