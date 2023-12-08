@@ -5,6 +5,9 @@
     "blog": "Blog",
     "about": "About",
     "contact": "Contact",
+    "name": "Nom:",
+    "email": "E-mail:",
+    "send": "ENVOYER",
     "header_welcome": "BIENVENUE À YRSHOP",
     "header_title": "produits de beauté",
     "header_description": "Visitez notre site web dès aujourd'hui pour découvrir notre gamme de produits de beauté et trouver ceux qui vous conviennent le mieux.",
@@ -21,6 +24,9 @@
     "browse_all": "PARCOURIR TOUT",
     "view_more": "VOIR PLUS",
     "best_collection": "MEILLEURES COLLECTIONS",
-    "our_collection": "Nos Collections"
+    "our_collection": "Nos Collections",
+    "get_update": "ÊTRE MISE À JOUR",
+    "newsletter":"Bulletin",
+    "newsletter_desc": "Offres et réductions exclusives : soyez le premier informé des ventes à venir, des promotions flash et des offres spéciales sur les produits que vous aimez."
   }
 }

@@ -39,11 +39,11 @@ const nameVariant = {
   animateTo: { x: 0, opacity: 1, transition: { duration: 1 } },
 };
 const descVariant = {
-  startIn: { y: 200, opacity: 0 },
+  startIn: { y: 100, opacity: 0 },
   animateTo: { y: 0, opacity: 1, transition: { duration: 1 } },
 };
 const linkVariant = {
-  startIn: { y: 200, opacity: 0 },
+  startIn: { y: 100, opacity: 0 },
   animateTo: { y: 0, opacity: 1, transition: { duration: 1 } },
 };
 
