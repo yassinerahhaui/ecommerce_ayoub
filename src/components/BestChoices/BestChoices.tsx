@@ -26,7 +26,7 @@ const headerVariant = {
   animateTo: { scale: 1, y: 0, opacity: 1, transition: { duration: 1 } },
 };
 
-const products = [
+export const products = [
   {
     id: 1,
     name_fr: "produit numero 1",
