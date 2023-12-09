@@ -8,7 +8,10 @@ interface NewsletterArticleI {
   newsletter: string;
   newsletter_desc: string;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 68a5a91 (complete Newsletter component)
 const articleVariant = {
   startIn: { scale: 0 },
   animateTo: { scale: 1, transition: { duration: 1 } },
