@@ -64,7 +64,7 @@ const HomeAbout = () => {
       <Image
         src={chanel}
         alt="chanel image"
-        className={`w-full h-[calc(100dvh_-_6rem)] md:h-[calc(100dvh_-_108px)]`}
+        className={`w-full h-[calc(100vh_-_6rem)] md:h-[calc(100vh_-_108px)]`}
       />
       <article className="absolute max-w-[90%] py-5 w-[600px] rounded shadow-lg shadow-gray-400 top-[50%] start-[50%] lg:start-[40%] transform translate-x-[-50%] translate-y-[-50%] bg-white">
         <Slider {...settings}>
