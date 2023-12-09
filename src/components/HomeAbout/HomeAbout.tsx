@@ -60,7 +60,7 @@ const HomeAbout = () => {
     pauseOnHover: true,
   };
   return (
-    <section className="relative">
+    <section className="relative w-full overflow-x-hidden">
       <Image
         src={chanel}
         alt="chanel image"
