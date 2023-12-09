@@ -59,6 +59,7 @@ const HomeAbout = () => {
     autoplaySpeed: 4000,
     pauseOnHover: true,
   };
+  const lang = localStorage.getItem("language");
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -87,7 +88,10 @@ const HomeAbout = () => {
         <Slider {...settings}>
           {team.map((item) => {
             return (
-              <div className="px-4 cursor-grab">
+              <div
+                className="px-4 cursor-grab"
+                dir={lang === "fr" ? "ltr" : "rtl"}
+              >
                 <p className="text-sm font-medium text-gray-600 line-clamp-6">
                   “{language(item.desc_fr, item.desc_ar)}”
                 </p>

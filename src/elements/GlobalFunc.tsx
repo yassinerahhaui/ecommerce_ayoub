@@ -1,5 +1,3 @@
-"use client";
-
 export const language = (fr: string, ar: string) => {
   if (localStorage.getItem("language") === "fr") {
     return fr;
