@@ -61,6 +61,7 @@ const HomeAbout = () => {
   };
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <section className="relative w-full overflow-x-hidden">
       <Image
         src={chanel}
@@ -70,6 +71,9 @@ const HomeAbout = () => {
       <article className="absolute max-w-[90%] py-5 w-[600px] rounded shadow-lg shadow-gray-400 top-[50%] left-[50%] lg:left-[40%] transform translate-x-[-50%] translate-y-[-50%] bg-white">
 =======
     <section className="relative">
+=======
+    <section className="relative w-full overflow-x-hidden">
+>>>>>>> 1d52e05 (add HomeAbout component and install slick-react)
       <Image
         src={chanel}
         alt="chanel image"
