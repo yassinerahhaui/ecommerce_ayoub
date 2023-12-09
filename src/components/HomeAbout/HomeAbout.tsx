@@ -59,10 +59,7 @@ const HomeAbout = () => {
     autoplaySpeed: 4000,
     pauseOnHover: true,
   };
-  const lang = localStorage.getItem("language");
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <section className="relative w-full overflow-x-hidden">
       <Image
         src={chanel}
@@ -70,28 +67,10 @@ const HomeAbout = () => {
         className={`w-full h-[calc(100vh_-_6rem)] md:h-[calc(100vh_-_108px)]`}
       />
       <article className="absolute max-w-[90%] py-5 w-[600px] rounded shadow-lg shadow-gray-400 top-[50%] left-[50%] lg:left-[40%] transform translate-x-[-50%] translate-y-[-50%] bg-white">
-<<<<<<< HEAD
-=======
-    <section className="relative">
-=======
-    <section className="relative w-full overflow-x-hidden">
->>>>>>> 1d52e05 (add HomeAbout component and install slick-react)
-      <Image
-        src={chanel}
-        alt="chanel image"
-        className={`w-full h-[calc(100vh_-_6rem)] md:h-[calc(100vh_-_108px)]`}
-      />
-      <article className="absolute max-w-[90%] py-5 w-[600px] rounded shadow-lg shadow-gray-400 top-[50%] start-[50%] lg:start-[40%] transform translate-x-[-50%] translate-y-[-50%] bg-white">
->>>>>>> bbd794d (add HomeAbout component and install slick-react)
-=======
->>>>>>> adc4f3b (add HomeAbout component and install slick-react)
         <Slider {...settings}>
           {team.map((item) => {
             return (
-              <div
-                className="px-4 cursor-grab"
-                dir={lang === "fr" ? "ltr" : "rtl"}
-              >
+              <div className="px-4 cursor-grab">
                 <p className="text-sm font-medium text-gray-600 line-clamp-6">
                   “{language(item.desc_fr, item.desc_ar)}”
                 </p>
