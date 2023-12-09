@@ -9,9 +9,13 @@ interface NewsletterArticleI {
   newsletter_desc: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 68a5a91 (complete Newsletter component)
+=======
+
+>>>>>>> bbd794d (add HomeAbout component and install slick-react)
 const articleVariant = {
   startIn: { scale: 0 },
   animateTo: { scale: 1, transition: { duration: 1 } },
