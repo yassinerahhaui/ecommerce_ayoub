@@ -3,22 +3,28 @@ import Review from "./Review"
 type DescriptionProps = {
     review: boolean,
     setReview: React.Dispatch<React.SetStateAction<boolean>>
+    description: boolean,
+    setDescription: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 
-const Description = ({ review, setReview }: DescriptionProps) => {
+const Description = ({ review, setReview, description, setDescription}: DescriptionProps) => {
     const handleReview = () => {
-        setReview(!review)
+        setReview(true)
     }
-    const buttonStyle = "border w-[7.78813rem] border-solid border-[#D3CED2] flex justify-center items-center py-3 px-4";
+    const handleDescription = () => {
+        setReview(false)
+    }
+
+    const buttonStyle = "border w-[7.78813rem] border-solid border-b-white  border-[#D3CED2] flex justify-center items-center py-3 px-4";
 
     return (
-        <div className="bg-white pt-16 px-3 ">
-            <div className="flex pl-3">
-                <button onClick={handleReview} className={buttonStyle}>Description</button>
+        <div className="bg-white pt-16 px-3 m-auto sm:px-20 relative ">
+            <div className="flex pl-3 border-[#D3CED2] border-b-2">
+                <button onClick={handleDescription} className={description? (` ${buttonStyle}`) :buttonStyle }>Description</button>
                 <button onClick={handleReview} className={buttonStyle}>Reviews</button>
             </div>
-            {review ? (<Review />) : <div className="border-b-2 pl-5 pt-7 pb-11 flex flex-col gap-5 ">
+            {review ? (<Review />) : <div className="border-b-2 pl-5 pt-7 pb-11 flex flex-col gap-5 border-[#D3CED2]">
                 <h3 className="text-black font-bold text-lg">Description</h3>
                 <p className="text-text-light">Pellentesque habitant morbi tristique
                     senectus et netus et malesuada fames

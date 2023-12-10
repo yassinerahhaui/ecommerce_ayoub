@@ -10,11 +10,10 @@ const Review = () => {
   };
   const handleSubmit = (e:any) => {
     e.preventDefault();
-    // Handle form submission logic here
     console.log('Form submitted!');
   };
   return (
-    <div className="p-7">
+    <div className="p-7 flex flex-col gap-5">
       <h3 className="text-black font-bold text-lg">Review</h3>
       <span className="text-text-light">There are no reviews yet</span>
       <p className="text-text-light">Be the first to review “Monstera Adansonii”
@@ -22,8 +21,8 @@ const Review = () => {
         *</p>
       <form action="/submit-review" method="post">
       <div className="mb-4">
-        <label htmlFor="rating" className="block text-sm font-medium text-gray-700">
-          Rating:
+        <label htmlFor="rating" className="text-sm font-medium ">
+          Your rating*:
         </label>
         <div className="flex items-center mt-1">
           {[1, 2, 3, 4, 5].map((star) => (
@@ -39,8 +38,8 @@ const Review = () => {
         </div>
       </div>
       <div className="mb-4">
-        <label htmlFor="review" className="block text-sm font-medium text-gray-700">
-          Review:
+        <label htmlFor="review" className="text-sm font-medium ">
+          Your Review *:
         </label>
         <textarea
           id="review"
@@ -50,8 +49,8 @@ const Review = () => {
         ></textarea>
       </div>
       <div className="mb-4">
-        <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-          Name:
+        <label htmlFor="name" className=" text-sm font-medium ">
+          Name *:
         </label>
         <input
           type="text"
@@ -63,8 +62,8 @@ const Review = () => {
       </div>
        </form>
        <div className="mb-4">
-        <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-          Email:
+        <label htmlFor="email" className="text-sm font-medium text-gray-700">
+          Email *:
         </label>
         <input
           type="email"
@@ -77,9 +76,9 @@ const Review = () => {
       <button
         type="submit"
         onClick={handleSubmit}
-        className="w-full py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
+        className="w-[7.78813rem] py-2 px-4 bg-gray-400 text-white rounded-md hover:bg-gray-500 focus:outline-none"
       >
-        Submit Review
+        Submit
       </button>
     </div>)
 }
