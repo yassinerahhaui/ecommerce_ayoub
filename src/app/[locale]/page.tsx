@@ -4,6 +4,7 @@ import BestChoices from "@/components/BestChoices/BestChoices";
 import { useTranslations } from "next-intl";
 import OurCollections from "@/components/Collections/OurCollections";
 import Newsletter from "@/components/Newsletter/Newsletter";
+import HomeAbout from "@/components/HomeAbout/HomeAbout";
 
 export default function Home() {
   const t = useTranslations("Index");
@@ -19,6 +20,7 @@ export default function Home() {
       />
       <OurCollections />
       <Newsletter />
+      <HomeAbout />
     </main>
   );
 }
