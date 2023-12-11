@@ -16,12 +16,12 @@ const Description = ({ review, setReview, description, setDescription}: Descript
         setReview(false)
     }
 
-    const buttonStyle = "border w-[7.78813rem] border-solid border-b-white  border-[#D3CED2] flex justify-center items-center py-3 px-4";
+    const buttonStyle = "border w-[7.78813rem] border-solid border-b-white border-[#D3CED2] flex justify-center items-center py-3 px-4";
 
     return (
-        <div className="bg-white pt-16 px-3 m-auto sm:px-20 relative ">
-            <div className="flex pl-3 border-[#D3CED2] border-b-2">
-                <button onClick={handleDescription} className={description? (` ${buttonStyle}`) :buttonStyle }>Description</button>
+        <div className="bg-white pt-16 px-3 m-auto sm:px-20  ">
+            <div className="flex pl-3 border-[#D3CED2]  border-b-2 before:absolute before:left-0 before:bottom-0 before:w-full before:border before:border-white before:z-10" >
+                <button onClick={handleDescription} className={buttonStyle }>Description</button>
                 <button onClick={handleReview} className={buttonStyle}>Reviews</button>
             </div>
             {review ? (<Review />) : <div className="border-b-2 pl-5 pt-7 pb-11 flex flex-col gap-5 border-[#D3CED2]">

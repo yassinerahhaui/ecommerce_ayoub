@@ -14,7 +14,7 @@ import img8 from "@/assets/images/products/08.jpg";
 import img9 from "@/assets/images/products/09.jpg";
 import img10 from "@/assets/images/products/10.jpg";
 import Image from "next/image";
-import Link from "next-intl/link";
+import Link from "next/link";
 interface Title {
   best_choices: string;
   popular_products: string;
