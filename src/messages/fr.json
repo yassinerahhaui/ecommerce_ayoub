@@ -26,7 +26,10 @@
     "best_collection": "MEILLEURES COLLECTIONS",
     "our_collection": "Nos Collections",
     "get_update": "ÊTRE MISE À JOUR",
-    "newsletter":"Bulletin",
-    "newsletter_desc": "Offres et réductions exclusives : soyez le premier informé des ventes à venir, des promotions flash et des offres spéciales sur les produits que vous aimez."
+    "newsletter": "Bulletin",
+    "newsletter_desc": "Offres et réductions exclusives : soyez le premier informé des ventes à venir, des promotions flash et des offres spéciales sur les produits que vous aimez.",
+    "from_our_blog": "DE NOTRE BLOG",
+    "latest_article": "Derniers Articles",
+    "home_blog_desc": "Votre guide du marché mondial : obtenez des conseils d'initiés, des avis d'experts et des informations culturelles pour naviguer dans le monde des produits et des passions."
   }
 }
