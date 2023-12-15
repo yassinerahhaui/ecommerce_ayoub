@@ -9,8 +9,8 @@ interface ArticleHeader {
   home_blog_desc: string;
 }
 const ourBlogVariant = {
-  startIn: { y: -100, opacity: 0 },
-  animateTo: { y: 0, opacity: 1, transition: { duration: 1 } },
+  startIn: { x: 150, opacity: 0 },
+  animateTo: { x: 0, opacity: 1, transition: { duration: 1 } },
 };
 const titleVariant = {
   startIn: { x: -150, opacity: 0 },
@@ -27,10 +27,10 @@ const HomeBlogHeader = ({
   home_blog_desc,
 }: ArticleHeader) => {
   const ourBlogControllers = useAnimation();
-  const [ourBlogRef, ourBloginView] = useInView();
+  const [ourBlogRef, ourBlogInView] = useInView();
   useEffect(() => {
-    ourBloginView ? ourBlogControllers.start("animateTo") : "";
-  }, [ourBloginView, ourBlogControllers]);
+    ourBlogInView ? ourBlogControllers.start("animateTo") : "";
+  }, [ourBlogInView, ourBlogControllers]);
   // title animation
   const titleControllers = useAnimation();
   const [titleRef, titleinView] = useInView();
@@ -50,11 +50,17 @@ const HomeBlogHeader = ({
         initial="startIn"
         animate={ourBlogControllers}
         variants={ourBlogVariant}
-        className=""
+        className="w-8 border border-primary mb-2"
+      ></motion.div>
+      <motion.h5
+        ref={ourBlogRef}
+        initial="startIn"
+        animate={ourBlogControllers}
+        variants={ourBlogVariant}
+        className="text-primary text-md font-semibold"
       >
-        <div className="w-8 border border-primary mb-2"></div>
-        <h5 className="text-primary text-md font-semibold">{from_our_blog}</h5>
-      </motion.div>
+        {from_our_blog}
+      </motion.h5>
       <motion.h2
         ref={titleRef}
         initial="startIn"

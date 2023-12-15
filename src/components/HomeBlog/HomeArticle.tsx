@@ -1,6 +1,9 @@
 "use client";
 import { language } from "@/elements/GlobalFunc";
-import Link from "next-intl/link";
+import Link from "next/link";
+import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 interface Article {
   id: number;
@@ -11,10 +14,27 @@ interface Article {
   created_at: Date;
 }
 
+const articleVariant = {
+  startIn: { scale: 0, opacity: 0 },
+  animateTo: { scale: 1, opacity: 1, transition: { duration: 1 } },
+};
+
 const HomeArticle = ({ el, view_more }: { el: Article; view_more: string }) => {
   const data = el;
+  const controllers = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    inView ? controllers.start("animateTo") : "";
+  }, [inView, controllers]);
   return (
-    <article key={data.id} className="border-t-2 border-primary pt-4 mb-6">
+    <motion.article
+      ref={ref}
+      initial="startIn"
+      animate={controllers}
+      variants={articleVariant}
+      key={data.id}
+      className="border-t-2 border-primary pt-4 mb-6"
+    >
       <h3 className="text-gray-800 text-lg font-bold line-clamp-2">
         {language(data.title_fr, data.title_ar)}
       </h3>
@@ -40,7 +60,7 @@ const HomeArticle = ({ el, view_more }: { el: Article; view_more: string }) => {
       >
         {view_more}
       </Link>
-    </article>
+    </motion.article>
   );
 };
 
