@@ -53,7 +53,7 @@ const articles = [
 const HomeBlog = () => {
   const t = useTranslations("Index");
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:grid-cols-3 px-6 md:px-20 my-20">
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:grid-cols-3 px-6 md:px-20 my-20 w-full overflow-hidden">
       <div className="flex w-full md:h-full items-center">
         <Image
           src={imgBg}
