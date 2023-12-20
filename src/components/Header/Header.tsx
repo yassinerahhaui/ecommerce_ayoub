@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 const Header = () => {
   const t = useTranslations("Index");
   return (
-    <header className="min-h-[100dvh] z-0 w-full relative mt-24 md:mt-[108px] overflow-x-hidden bg-black">
+    <header className="min-h-[100dvh] z-0 w-full relative overflow-x-hidden bg-black">
       <Image
         src={Header1}
         alt="image header"
