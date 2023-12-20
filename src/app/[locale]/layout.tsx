@@ -41,7 +41,7 @@ export default function RootLayout({
       <body
         className={`${
           locale === "fr" ? poppins.className : markazi.className
-        } absolute top-24 md:top-[108px] overflow-x-hidden w-full`}
+        } mt-24 md:mt-[108px] overflow-x-hidden w-full`}
       >
         <Navbar />
         <LanguageDefault />
