@@ -2,11 +2,9 @@
 import { language } from "@/elements/GlobalFunc";
 import Image from "next/image";
 import Link from "next/link";
-import { footer } from "@/data/footer";
+import { footer, icons } from "@/data/footer";
 import logo from "../../../public/images/yrshop.png";
 import footerbg from "@/assets/images/footer/footer.jpg";
-import { FaXTwitter, FaInstagram, FaFacebookF } from "react-icons/fa6";
-import { FaSnapchatGhost, FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   const date = new Date();
@@ -53,31 +51,11 @@ const Footer = () => {
           alt="YRShop logo image"
         />
         <ul className="flex items-center justify-center md:justify-end">
-          <a href="" className={iconStyle}>
-            <li>
-              <FaFacebookF />
-            </li>
-          </a>
-          <a href="" className={iconStyle}>
-            <li>
-              <FaInstagram />
-            </li>
-          </a>
-          <a href="" className={iconStyle}>
-            <li>
-              <FaSnapchatGhost />
-            </li>
-          </a>
-          <a href="" className={iconStyle}>
-            <li>
-              <FaTiktok />
-            </li>
-          </a>
-          <a href="" className={iconStyle}>
-            <li>
-              <FaXTwitter />
-            </li>
-          </a>
+          {icons.map((icon) => (
+            <a key={icon.id} href={icon.link} className={iconStyle}>
+              <li>{icon.icon}</li>
+            </a>
+          ))}
         </ul>
       </div>
     </footer>

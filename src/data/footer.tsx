@@ -1,5 +1,11 @@
-import { FaBuilding, FaPhoneAlt } from "react-icons/fa";
+import {
+  FaBuilding,
+  FaPhoneAlt,
+  FaSnapchatGhost,
+  FaTiktok,
+} from "react-icons/fa";
 import { MdLocationPin, MdEmail } from "react-icons/md";
+import { FaXTwitter, FaInstagram, FaFacebookF } from "react-icons/fa6";
 
 export const footer = [
   {
@@ -129,4 +135,12 @@ export const footer = [
       },
     ],
   },
+];
+
+export const icons = [
+  { id: 1, icon: <FaFacebookF />, link: "" },
+  { id: 2, icon: <FaInstagram />, link: "" },
+  { id: 3, icon: <FaSnapchatGhost />, link: "" },
+  { id: 4, icon: <FaTiktok />, link: "" },
+  { id: 5, icon: <FaXTwitter />, link: "" },
 ];
