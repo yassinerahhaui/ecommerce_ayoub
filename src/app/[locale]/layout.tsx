@@ -6,6 +6,7 @@ import "./globals.css";
 import LanguageDefault from "@/elements/LanguageDefault";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Footer from "@/components/Footer/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -45,6 +46,7 @@ export default function RootLayout({
         <Navbar />
         <LanguageDefault />
         {children}
+        <Footer />
       </body>
     </html>
   );
