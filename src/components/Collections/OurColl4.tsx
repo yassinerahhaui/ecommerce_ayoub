@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import { language } from "@/elements/GlobalFunc";
 import img6 from "@/assets/images/collections/7.jpg";
 import cream from "@/assets/images/cream.png";

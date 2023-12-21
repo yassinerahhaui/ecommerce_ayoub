@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import { currency, language } from "@/elements/GlobalFunc";
 
 interface Collection1 {

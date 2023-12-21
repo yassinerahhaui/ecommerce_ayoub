@@ -1,8 +1,7 @@
 "use client";
-import Link from "next/link";
+import { Link, usePathname } from "@/navigation";
 import { navData1 } from "@/interfaces/navbar";
 import { Pages } from "@/interfaces/navbar";
-// import { usePathname } from "next-intl/client";
 
 const NavStart = (props: Pages) => {
   const navData: navData1[] = [
@@ -12,7 +11,7 @@ const NavStart = (props: Pages) => {
     { id: 3, name: props.about, link: "/about" },
     { id: 4, name: props.contact, link: "/contact" },
   ];
-  const pathname = "/"; //usePathname();
+  const pathname = usePathname();
   return (
     <ul className="flex items-center">
       {navData.map((el) => (

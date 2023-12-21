@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import img3 from "@/assets/images/collections/3.jpg";
 import { language } from "@/elements/GlobalFunc";
 import { FaLongArrowAltRight, FaLongArrowAltLeft } from "react-icons/fa";

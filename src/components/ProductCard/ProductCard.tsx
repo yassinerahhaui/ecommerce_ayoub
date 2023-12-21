@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import Image from "next/image";
 import { language, currency } from "@/elements/GlobalFunc";
 import { ProductCard } from "@/interfaces/productCard";
