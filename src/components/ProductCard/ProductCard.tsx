@@ -36,7 +36,7 @@ const ProductCard = ({
       animate={controllers}
       variants={productVariant}
       key={pr.id}
-      className="relative"
+      className="relative mb-2"
     >
       <Link href={`/store/${pr.id}`}>
         {pr.sale ? (
