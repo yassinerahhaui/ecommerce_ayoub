@@ -1,5 +1,5 @@
 "use client"
-import { products } from "../BestChoices/BestChoices"
+import { products } from "@/data/bestchoices"
 import Description from "./Description"
 import {useState } from "react"
 import ImageDetail from "./ImageDetail"
