@@ -10,7 +10,7 @@ const Details = ({name_fr, price}:DetailsProps) => {
     <div className="flex flex-col sm:w-1/2 lg:w-1/3 px-7 sm:p-7">
     <h2 className="text-[#222] font-bold text-4xl capitalize">{name_fr}</h2>
     <span className="text-primary-light pt-6 pb-8 flex">{'$' + price }</span>
-    <p className="text-text-light font-normal mb-7">Pellentesque habitant morbi tristique
+    <p className="text-text-light font-normal mb-7 text-justify">Pellentesque habitant morbi tristique
       senectus et netus et malesuada fames
       ac turpis egestas. Vestibulum tortor
       quam, feugiat vitae, ultricies eget,

@@ -18,7 +18,7 @@ const ImageDetail = ({image, name_fr}:ProductCardProps) => {
 
   return (
     <div className="flex flex-col items-center justify-center sm:items-start lg:w-2/3 lg:grid lg:grid-cols-3 lg:grid-rows-none sm:justify-start p-7 sm:w-1/2">
-         <Image className="lg:px-7  w-full lg:h-[19.38rem] h-[13.75rem] lg:col-span-2" src={image} alt={name_fr} />
+         <Image className="lg:px-7  w-full lg:h-[19.38rem] max-h-[300px] lg:col-span-2" src={image} alt={name_fr} />
          <ul className="lg:px-7 mt-8 lg:m-0  w-full flex flex-col sm:flex-row lg:flex-col gap-[1.12rem]">
            <li className={`border-[#3B5998] ${SocialIconStyle}`}><a href="" >{<Image src={facebook} alt="Facebook icon" />}</a></li>
            <li className={`border-[#1DA1F2] ${SocialIconStyle}`}><a href="">{<Image src={twitter} alt="twitter icon" />}</a></li>
