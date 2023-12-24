@@ -1,12 +1,10 @@
 "use client";
 import { useState } from "react";
-import Link from "next/link";
+import { Link, usePathname } from "@/navigation";
 import { FaLanguage } from "react-icons/fa";
 import { FcCurrencyExchange } from "react-icons/fc";
 import { FaSearch } from "react-icons/fa";
 import { HiOutlineMenu } from "react-icons/hi";
-import { usePathname } from "next/navigation";
-
 const NavEnd = ({ search }: { search: string }) => {
   const [list, setList] = useState(false);
   const [searchBar, setSearchBar] = useState(false);

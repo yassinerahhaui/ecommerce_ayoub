@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import Image from "next/image";
 import { language, currency } from "@/elements/GlobalFunc";
 import { ProductCard } from "@/interfaces/productCard";
@@ -36,7 +36,7 @@ const ProductCard = ({
       animate={controllers}
       variants={productVariant}
       key={pr.id}
-      className="relative"
+      className="relative mb-2"
     >
       <Link href={`/store/${pr.id}`}>
         {pr.sale ? (

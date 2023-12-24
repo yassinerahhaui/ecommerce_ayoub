@@ -70,7 +70,7 @@ const HomeAbout = () => {
         <Slider {...settings}>
           {team.map((item) => {
             return (
-              <div className="px-4 cursor-grab">
+              <div key={item.id} className="px-4 cursor-grab">
                 <p className="text-sm font-medium text-gray-600 line-clamp-6">
                   “{language(item.desc_fr, item.desc_ar)}”
                 </p>

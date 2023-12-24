@@ -1,8 +1,10 @@
-export const language = (fr: string, ar: string) => {
+"use client";
+
+export const language = (french: string, arabic: string) => {
   if (localStorage.getItem("language") === "fr") {
-    return fr;
+    return french;
   } else {
-    return ar;
+    return arabic;
   }
 };
 export const currency = (prix: string) => {

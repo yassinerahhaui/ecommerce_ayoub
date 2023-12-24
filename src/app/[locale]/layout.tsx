@@ -6,6 +6,7 @@ import "./globals.css";
 import LanguageDefault from "@/elements/LanguageDefault";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Footer from "@/components/Footer/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -37,34 +38,15 @@ export default function RootLayout({
 
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
-      <head>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="./icons/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="./icons/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="./icons/favicon-16x16.png"
-        />
-      </head>
       <body
         className={`${
           locale === "fr" ? poppins.className : markazi.className
-        } absolute top-24 md:top-[108px] overflow-x-hidden w-full`}
-        dir={locale === "ar" ? "rtl" : "ltr"}
+        } mt-24 md:mt-[108px] overflow-x-hidden w-full`}
       >
         <Navbar />
         <LanguageDefault />
         {children}
+        <Footer />
       </body>
     </html>
   );

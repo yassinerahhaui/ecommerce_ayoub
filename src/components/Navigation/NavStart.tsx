@@ -1,8 +1,7 @@
 "use client";
-import Link from "next/link";
+import { Link, usePathname } from "@/navigation";
 import { navData1 } from "@/interfaces/navbar";
 import { Pages } from "@/interfaces/navbar";
-import { usePathname } from "next/navigation";
 
 const NavStart = (props: Pages) => {
   const navData: navData1[] = [

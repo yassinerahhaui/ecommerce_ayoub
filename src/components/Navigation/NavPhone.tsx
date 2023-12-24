@@ -3,11 +3,10 @@ import Image from "next/image";
 import { HiOutlineMenu } from "react-icons/hi";
 import Logo from "../../../public/images/yrshop.png";
 import { useState } from "react";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/navigation";
 import { Pages, navData1 } from "@/interfaces/navbar";
 import { FaLanguage } from "react-icons/fa";
 import { FcCurrencyExchange } from "react-icons/fc";
-import Link from "next/link";
 
 const NavPhone = (props: Pages) => {
   const [showList, setShowList] = useState(false);

@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 const Newsletter = () => {
   const t = useTranslations("Index");
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 mb-32 gap-10 px-6 md:px-20">
+    <section className="grid grid-cols-1 w-full overflow-hidden md:grid-cols-2 mb-32 gap-10 px-6 md:px-20">
       <NewsletterArticle
         get_update={t("get_update")}
         newsletter={t("newsletter")}
