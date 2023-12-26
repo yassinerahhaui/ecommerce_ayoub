@@ -26,7 +26,6 @@ const FormContact = ({
         alt="background-form"
       />
       <div className="lg:w-[40rem] sm:rounded-sm lg:px-12 lg:py-16 flex flex-col items-center justify-center sm:items-start gap-4 p-4 sm:bg-white sm:w-[24rem]">
-        {/* <span className="sm:hidden bg-primary-light w-[2.47438rem] h-[0.125rem]" /> */}
         <h3 className="text-[#222] font-bold text-4xl text-center sm:text-left ">
           {contact_us}
         </h3>
