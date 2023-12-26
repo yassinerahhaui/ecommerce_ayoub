@@ -21,7 +21,7 @@ export const contact_info = [
         item_fr: "yrshop.service@gmail.com",
         item_ar: "yrshop.service@gmail.com",
       },
-      { id: 1, item_fr: "212630034545", item_ar: "212630034545" },
+      { id: 2, item_fr: "212630034545", item_ar: "212630034545" },
     ],
   },
   {
@@ -35,7 +35,7 @@ export const contact_info = [
         item_ar: "الإثنين - الجمعة: 08 صباحًا - 09 مساءً",
       },
       {
-        id: 1,
+        id: 2,
         item_fr: "Samedi-dim : 10h-17h",
         item_ar: "السبت - الأحد: 10 صباحًا - 05 مساءً",
       },

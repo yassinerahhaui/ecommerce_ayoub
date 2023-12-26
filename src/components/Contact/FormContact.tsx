@@ -17,15 +17,16 @@ const FormContact = ({
   subject,
   send,
 }: ContactForm) => {
-  const inputStyles = "mt-1 p-2 w-full border border-gray-300 rounded-md";
+  const inputStyles =
+    "mt-1 w-full p-2 w-full border border-gray-300 rounded-md";
   return (
-    <div className="relative mb-20 min-h-screen flex sm:justify-start py-10 md:px-20 sm:items-center mt-4">
+    <div className="relative sm:mb-20 sm:min-h-screen flex sm:justify-start py-10 px-6 md:px-20 sm:items-center sm:mt-4">
       <Image
-        className="sm:flex hidden -z-10 absolute top-0 start-0 w-full h-full"
+        className="flex z-0 absolute top-0 start-0 w-full h-full"
         src={bgContact}
         alt="background-form"
       />
-      <div className="lg:w-[40rem] sm:rounded-sm lg:px-12 lg:py-16 flex flex-col items-center justify-center sm:items-start gap-4 p-4 sm:bg-white sm:w-[24rem]">
+      <div className="lg:w-[40rem] w-full z-10 sm:rounded-sm lg:px-12 lg:py-16 flex flex-col items-center justify-center sm:items-start gap-4 p-4 bg-white sm:w-[24rem]">
         <h3 className="text-[#222] font-bold text-4xl text-center sm:text-left ">
           {contact_us}
         </h3>

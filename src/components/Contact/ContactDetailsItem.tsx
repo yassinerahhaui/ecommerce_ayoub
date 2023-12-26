@@ -29,7 +29,9 @@ const ContactDetailsItem = ({ data }: { data: ContactInfoInterface }) => {
     >
       <h4 className={h4Style}>{language(data.title_fr, data.title_ar)}</h4>
       {data.list.map((el) => (
-        <p className={PStyle}>{language(el.item_fr, el.item_ar)}</p>
+        <p className={PStyle} key={el.id}>
+          {language(el.item_fr, el.item_ar)}
+        </p>
       ))}
     </motion.li>
   );
