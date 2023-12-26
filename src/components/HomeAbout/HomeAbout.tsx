@@ -42,13 +42,18 @@ const team = [
 ];
 
 const HomeAbout = () => {
+  let size = window.innerWidth
   const [item, setItem] = useState(1);
-  const [wdt, setWdt] = useState(window.innerWidth);
+  const [wdt, setWdt] = useState(size);
+  const handleResize = () => {
+    setWdt(window.innerWidth);
+    
+  }
   useEffect(() => {
-    window.addEventListener("resize", () => {
-      setWdt(window.innerWidth);
-    });
+    window.addEventListener("resize", handleResize);
     wdt < 600 ? setItem(1) : setItem(2);
+    return () => window.removeEventListener("resize", handleResize);
+
   }, [wdt, item]);
   const settings = {
     dots: false,
