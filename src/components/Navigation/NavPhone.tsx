@@ -26,7 +26,9 @@ const NavPhone = (props: Pages) => {
         className="flex md:hidden items-center fixed top-0 start-0 w-full
           justify-between px-6 shadow z-30 shadow-gray-200 bg-white h-24"
       >
-        <Image src={Logo} alt="logo image YRShop" width={100} height={60} />
+        <Link href={"/"} className="block">
+          <Image src={Logo} alt="logo image YRShop" width={100} height={60} />
+        </Link>
         <button
           className="text-2xl text-gray-800 cursor-pointer"
           onClick={() => setShowList(true)}
