@@ -6,7 +6,7 @@ import {
 } from "react-icons/fa";
 import { MdLocationPin, MdEmail } from "react-icons/md";
 import { FaXTwitter, FaInstagram, FaFacebookF } from "react-icons/fa6";
-
+ 
 export const footer = [
   {
     id: 1,
