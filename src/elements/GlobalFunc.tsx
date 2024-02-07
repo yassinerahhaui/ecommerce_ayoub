@@ -1,10 +1,10 @@
 "use client";
 
 export const language = (french: string, arabic: string) => {
-  if (localStorage.getItem("language") === "fr") {
-    return french;
-  } else {
+  if (localStorage.getItem("language") === "ar") {
     return arabic;
+  } else {
+    return french;
   }
 };
 export const currency = (prix: string) => {
