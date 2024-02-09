@@ -9,16 +9,8 @@ const productData = {
   id: 1,
   name_fr: "Shampoing Pantene Pro-V Miracles Lift & Volume",
   name_ar: "شامبو بانتين برو-في ميراكلز لرفع وكثافة الشعر",
-  details_fr: [
-    "Spécialement conçu pour les cheveux épais et repulpés",
-    "À la biotine et à l’eau de rose",
-    "Pour un lavage doux et hydratant de vos cheveux",
-  ],
-  details_ar: [
-    "مع البيوتين وماء الورد",
-    "لغسل لطيف ومرطب لشعرك",
-    "مصمم خصيصًا للشعر الكثيف والممتلئ",
-  ],
+  details_fr: "Spécialement conçu pour les cheveux épais et repulpés,,,À la biotine et à l’eau de rose,,,Pour un lavage doux et hydratant de vos cheveux",
+  details_ar: "مع البيوتين وماء الورد,,,لغسل لطيف ومرطب لشعرك,,,مصمم خصيصًا للشعر الكثيف والممتلئ",
   desc_fr:
     "Spécialement conçu pour les cheveux épais et repulpés, À la biotine et à l’eau de rose, Pour un lavage doux et hydratant de vos cheveux",
   desc_ar:
@@ -29,6 +21,7 @@ const productData = {
   category: 1,
   image: image,
   created_at: "",
+  last_update: "",
 };
 const header = {
   name_fr: productData.name_fr,
