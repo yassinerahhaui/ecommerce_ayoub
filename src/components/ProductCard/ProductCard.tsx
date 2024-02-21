@@ -69,9 +69,9 @@ const ProductCard = ({
           </h4>
         </div>
       </Link>
-      <button className="border-b mx-auto block border-gray-500 text-gray-500 hover:text-gray-800 hover:border-gray-800 text-sm sm:text-md font-medium cursor-pointer select-none">
+      {/* <button className="border-b mx-auto block border-gray-500 text-gray-500 hover:text-gray-800 hover:border-gray-800 text-sm sm:text-md font-medium cursor-pointer select-none">
         {add_to_cart}
-      </button>
+      </button> */}
     </motion.div>
   );
 };

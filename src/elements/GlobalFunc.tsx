@@ -1,5 +1,7 @@
 "use client";
 
+export const backendUrl = "https://yrshopservice.pythonanywhere.com";
+
 export const language = (french: string, arabic: string) => {
   if (localStorage.getItem("language") === "ar") {
     return arabic;
@@ -7,6 +9,7 @@ export const language = (french: string, arabic: string) => {
     return french;
   }
 };
+
 export const currency = (prix: string) => {
   if (localStorage.getItem("currency") === "eur") {
     return `€${prix}`;

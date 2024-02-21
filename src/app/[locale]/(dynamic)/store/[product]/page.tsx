@@ -4,13 +4,16 @@ import ProductDesc from "@/components/ProductDetails/ProductDesc";
 import BestChoices from "@/components/BestChoices/BestChoices";
 import { useTranslations } from "next-intl";
 import Newsletter from "@/components/Newsletter/Newsletter";
+import OrderForm from "@/components/OrderForm/OrderForm";
 
 const productData = {
   id: 1,
   name_fr: "Shampoing Pantene Pro-V Miracles Lift & Volume",
   name_ar: "شامبو بانتين برو-في ميراكلز لرفع وكثافة الشعر",
-  details_fr: "Spécialement conçu pour les cheveux épais et repulpés,,,À la biotine et à l’eau de rose,,,Pour un lavage doux et hydratant de vos cheveux",
-  details_ar: "مع البيوتين وماء الورد,,,لغسل لطيف ومرطب لشعرك,,,مصمم خصيصًا للشعر الكثيف والممتلئ",
+  details_fr:
+    "Spécialement conçu pour les cheveux épais et repulpés,,,À la biotine et à l’eau de rose,,,Pour un lavage doux et hydratant de vos cheveux",
+  details_ar:
+    "مع البيوتين وماء الورد,,,لغسل لطيف ومرطب لشعرك,,,مصمم خصيصًا للشعر الكثيف والممتلئ",
   desc_fr:
     "Spécialement conçu pour les cheveux épais et repulpés, À la biotine et à l’eau de rose, Pour un lavage doux et hydratant de vos cheveux",
   desc_ar:
@@ -43,6 +46,7 @@ const Product = () => {
     <main className="">
       <ProductHeader header={header} image={productData.image} />
       <ProductDesc details={details} />
+      <OrderForm />
       <BestChoices
         best_choices={t("best_choices")}
         popular_products={t("popular_products")}
