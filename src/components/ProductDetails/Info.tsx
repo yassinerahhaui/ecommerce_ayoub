@@ -1,4 +1,5 @@
 "use client";
+import { language } from "@/elements/GlobalFunc";
 import {
   FaFacebookF,
   FaTiktok,
@@ -55,13 +56,14 @@ const Info = () => {
       <ul className="">
         {/* delivery info */}
         <li className={textStyle}>
-          <FaCartShopping /> Free Delivery
+          <FaCartShopping /> {language("Livraison gratuite", "توصيل مجاني")}
         </li>
         <li className={textStyle}>
-          <FaRegCreditCard /> Money Back Gurantee
+          <FaRegCreditCard />{" "}
+          {language("Garantie de remboursement", "ضمان استعادة الاموال")}
         </li>
         <li className={textStyle}>
-          <FaShieldHalved /> Safety Gurantee
+          <FaShieldHalved /> {language("Garantie de sécurité", "ضمان السلامة")}
         </li>
         <li className={textStyle}>
           {localStorage.getItem("language") === "fr" ? (
@@ -69,7 +71,7 @@ const Info = () => {
           ) : (
             <FaPhoneFlip />
           )}{" "}
-          24 Hours Support
+          {language("Assistance 24/24", "المساعدة 24/24")}
         </li>
       </ul>
     </div>

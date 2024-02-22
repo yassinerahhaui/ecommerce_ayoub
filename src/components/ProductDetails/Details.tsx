@@ -2,7 +2,6 @@
 import { useContext } from "react";
 import { currency, language } from "@/elements/GlobalFunc";
 import { DetailsInterface } from "./ProductHeader";
-import { useState } from "react";
 import { OrderContext } from "@/contexts/OrderContext";
 
 const Details = ({ header }: { header: DetailsInterface }) => {
@@ -29,7 +28,7 @@ const Details = ({ header }: { header: DetailsInterface }) => {
         onClick={() => dispF?.setDisplayForm(true)}
         className="my-3 cursor-pointer w-full rounded py-2 text-center bg-primary text-white font-semibold hover:bg-primary-dark"
       >
-        Buy Now
+        {language("ACHETER MAINTENANT", "اشتري الآن")}
       </button>
     </article>
   );

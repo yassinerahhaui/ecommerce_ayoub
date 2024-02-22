@@ -81,7 +81,7 @@ const OrderForm = () => {
   return (
     <>
       {dispF?.displayForm ? (
-        <div className="p-6 rounded bg-white fixed max-h-[90%] top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] z-50">
+        <div className="p-6 rounded bg-white fixed max-w-[90%] max-h-[90%] top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] z-50">
           <form method="post" onSubmit={handleSubmit}>
             <label htmlFor="name" className={labelStyle}>
               Name:
