@@ -36,7 +36,7 @@ const BlogArticleCard = ({
     descInView ? descControllers.start("animateTo") : "";
   }, [descInView, descControllers]);
   return (
-    <article className="w-full rounded min-h-64">
+    <article className="w-full rounded min-h-64 overflow-x-hidden">
       <motion.div
         ref={imgRef}
         initial="startIn"
