@@ -1,7 +1,7 @@
 import ProductHeader from "@/components/ProductDetails/ProductHeader";
 import image from "@/assets/images/products/12.jpg";
 import ProductDesc from "@/components/ProductDetails/ProductDesc";
-import BestChoices from "@/components/BestChoices/BestChoices";
+import BestChoices from "@/components/BestChoices/BestChoices.1";
 import { useTranslations } from "next-intl";
 import Newsletter from "@/components/Newsletter/Newsletter";
 import OrderForm from "@/components/OrderForm/OrderForm";

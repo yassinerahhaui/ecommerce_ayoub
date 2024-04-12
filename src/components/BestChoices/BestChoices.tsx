@@ -1,10 +1,12 @@
 "use client";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
-import ProductCard from "../ProductCard/ProductCard";
-import { products } from "@/data/bestchoices";
+import { useEffect, useState } from "react";
+import { productsTest } from "@/data/bestchoices";
 import { Title } from "@/interfaces/bestchoices";
+import { backendUrl } from "@/elements/GlobalFunc";
+import { productCard } from "@/interfaces/productCard";
+import ProductCard from "../ProductCard/ProductCard";
 
 const headerVariant = {
   startIn: { scale: 0, y: 100, opacity: 0 },
@@ -19,6 +21,15 @@ const BestChoices = ({
 }: Title) => {
   const controlers = useAnimation();
   const [ref, inView] = useInView();
+  const [products, setProducts] = useState(productsTest);
+  const getProducts = async () => {
+    const res = await fetch(`${backendUrl}/best-choices`);
+    const data: productCard[] = await res.json();
+    setProducts(data);
+  };
+  useEffect(() => {
+    getProducts();
+  }, [getProducts]);
   useEffect(() => {
     if (inView) {
       controlers.start("animateTo");
@@ -54,16 +65,14 @@ const BestChoices = ({
         </motion.h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-10 py-4 px-6 md:px-20">
           {products.map((pr) => {
-            if (pr.in_stock) {
-              return (
-                <ProductCard
-                  key={pr.id}
-                  data={pr}
-                  add_to_cart={add_to_cart}
-                  sale={sale}
-                />
-              );
-            }
+            return (
+              <ProductCard
+                key={pr.id}
+                data={pr}
+                add_to_cart={add_to_cart}
+                sale={sale}
+              />
+            );
           })}
         </div>
       </section>

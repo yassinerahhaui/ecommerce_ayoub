@@ -1,113 +1,25 @@
-import img1 from "@/assets/images/products/01.jpg";
-import img2 from "@/assets/images/products/02.jpg";
-import img3 from "@/assets/images/products/03.jpg";
-import img4 from "@/assets/images/products/04.jpg";
-import img5 from "@/assets/images/products/05.jpg";
-import img6 from "@/assets/images/products/06.jpg";
-import img7 from "@/assets/images/products/07.jpg";
-import img8 from "@/assets/images/products/08.jpg";
-import img9 from "@/assets/images/products/09.jpg";
-import img10 from "@/assets/images/products/10.jpg";
-
-export const products = [
+export const productsTest = [
   {
-    id: 1,
-    name_fr: "produit numero 1",
-    name_ar: "المنتج رقم 1",
-    price: 40,
-    old_price: 45,
-    sale: false,
-    in_stock: true,
-    image: img1,
-  },
-  {
-    id: 2,
-    name_fr: "produit numero 2",
-    name_ar: "المنتج رقم 2",
-    price: 99.99,
-    old_price: 250,
-    sale: true,
-    in_stock: true,
-    image: img2,
-  },
-  {
-    id: 3,
-    name_fr: "produit numero 3",
-    name_ar: "المنتج رقم 3",
-    price: 22.5,
-    old_price: 45.99,
-    sale: true,
-    in_stock: true,
-    image: img3,
-  },
-  {
-    id: 4,
-    name_fr: "produit numero 4",
-    name_ar: "المنتج رقم 4",
-    price: 9,
-    old_price: 15,
-    sale: true,
-    in_stock: true,
-    image: img4,
-  },
-  {
-    id: 5,
-    name_fr: "produit numero 5",
-    name_ar: "المنتج رقم 5",
-    price: 12.35,
-    old_price: 65,
-    sale: true,
-    in_stock: true,
-    image: img5,
-  },
-  {
-    id: 6,
-    name_fr: "produit numero 6",
-    name_ar: "المنتج رقم 6",
-    price: 16.5,
-    old_price: 45,
-    sale: true,
-    in_stock: true,
-    image: img6,
-  },
-  {
-    id: 7,
-    name_fr: "produit numero 7",
-    name_ar: "المنتج رقم 7",
-    price: 15,
-    old_price: 27.99,
-    sale: true,
-    in_stock: true,
-    image: img7,
-  },
-  {
-    id: 8,
-    name_fr: "produit numero 8",
-    name_ar: "المنتج رقم 8",
-    price: 30,
-    old_price: 40,
-    sale: true,
-    in_stock: true,
-    image: img8,
-  },
-  {
-    id: 9,
-    name_fr: "produit numero 9",
-    name_ar: "المنتج رقم 9",
-    price: 15,
-    old_price: 27.99,
-    sale: true,
-    in_stock: true,
-    image: img9,
-  },
-  {
-    id: 10,
-    name_fr: "produit numero 10",
-    name_ar: "المنتج رقم 10",
-    price: 30,
-    old_price: 40,
-    sale: true,
-    in_stock: true,
-    image: img10,
+    id: 20,
+    name_fr:
+      "Mascara anti-sweat étanche allonge les cils extension du mascara de fibre de soie noire",
+    name_ar:
+      "ماسكارا مضادة للماء ، ماسكارا ، يطيل الرموش امتداد سوداء ماسكارا ماسكارا ماسكارا ماسكارا ماسكارا مستحضرات التجميل",
+    description_fr:
+      "La couleur noire\r\nAvantage: facile à porter, curling, épais\r\nLe forfait comprend: 1 acie\r\n\r\nVous rendre plus charmant\r\nIngrédients: Matériaux naturels.\r\npeut être utilisé dans la fête ou le maquillage professionnel.\r\nMascara facile à porter et à transporter et à cils imperméables.",
+    description_ar:
+      "لون أسود\r\nالفائدة: سهلة التآكل ، الشباك ، سميكة\r\nتشمل الحزمة: 1piece\r\n\r\nتجعلك أكثر سحرا\r\nالمكونات: المواد الطبيعية.\r\nيمكن استخدامها في الماكياج أو الماكياج المهني.\r\nمن السهل ارتداء وحمل ، ماسكارا مقاومة للماء.",
+    details_fr:
+      "La couleur noire,\r\nAvantage: Facile à porter un curling épais,\r\nLe forfait comprend: 1 pièce,\r\nVous rendre plus charmant,\r\nIngrédients: matériaux naturels.,\r\npeut être utilisé dans la fête ou le maquillage professionnel.,\r\nMascara facile à porter et à transporter des cils imperméables.",
+    details_ar:
+      "لون أسود،\r\nالفائدة: من السهل ارتداء الشباك سميكة ،\r\nتشمل الحزمة: 1piece ،\r\nتجعلك أكثر سحرة ،\r\nالمكونات: المواد الطبيعية. ،\r\nيمكن استخدامها في الحفلات أو المكياج المهني. ،\r\nمن السهل ارتداء وحمل ماسكارا مقاومة للماء.",
+    price: "6.00",
+    old_price: "9.55",
+    created_at: "2024-04-12T17:55:22.999507Z",
+    last_update: "2024-04-12T17:55:22.999554Z",
+    image:
+      "/media/products/Mascara%20anti-sweat%20%C3%A9tanche%20allonge%20les%20cils%20extension%20du%20mascara%20de%20fibre%20de%20soie%20noire/function_uuid4_at_0x7f33f3af8040.jpg",
+    quantity: 122,
+    category: 1,
   },
 ];

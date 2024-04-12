@@ -1,12 +1,16 @@
-import { StaticImageData } from "next/image";
-
-export interface ProductCard {
-  id?: number;
+export interface productCard {
+  id: number;
   name_fr: string;
   name_ar: string;
-  price: number;
-  old_price: number | undefined;
-  sale: boolean;
-  in_stock: boolean;
-  image: StaticImageData;
+  description_fr: string;
+  description_ar: string;
+  details_fr: string;
+  details_ar: string;
+  price: string;
+  old_price: string;
+  created_at: string;
+  last_update: string;
+  image: string;
+  quantity: number;
+  category: number;
 }

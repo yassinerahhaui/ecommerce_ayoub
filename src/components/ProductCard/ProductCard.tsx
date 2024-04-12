@@ -4,7 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import { Link } from "@/navigation";
 import Image from "next/image";
 import { language, currency } from "@/elements/GlobalFunc";
-import { ProductCard } from "@/interfaces/productCard";
+import { productCard } from "@/interfaces/productCard";
 
 const productVariant = {
   startIn: { scale: 0, opacity: 0 },
@@ -16,7 +16,7 @@ const ProductCard = ({
   add_to_cart,
   sale,
 }: {
-  data: ProductCard;
+  data: productCard;
   add_to_cart: string;
   sale: string;
 }) => {
@@ -39,7 +39,7 @@ const ProductCard = ({
       className="relative mb-2"
     >
       <Link href={`/store/${pr.id}`}>
-        {pr.sale ? (
+        {pr.old_price ? (
           <span className="absolute z-10 text-xs font-bold top-[-10px] right-[-10px] text-white bg-gray-600 rounded-full p-2">
             {sale}
           </span>
@@ -58,7 +58,7 @@ const ProductCard = ({
             {language(pr.name_fr, pr.name_ar)}
           </h3>
           <h4 className="text-md text-gray-500 font-medium mb-2">
-            {pr.sale ? (
+            {pr.old_price ? (
               <span className="line-through font-normal text-gray-400">
                 {currency(`${pr.old_price}`)}
               </span>

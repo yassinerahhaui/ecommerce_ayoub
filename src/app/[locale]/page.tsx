@@ -1,6 +1,6 @@
 import Collections from "@/components/Collections/Collections";
 import Header from "@/components/Header/Header";
-import BestChoices from "@/components/BestChoices/BestChoices";
+import BestChoices from "@/components/BestChoices/BestChoices.1";
 import { useTranslations } from "next-intl";
 import OurCollections from "@/components/Collections/OurCollections";
 import Newsletter from "@/components/Newsletter/Newsletter";
