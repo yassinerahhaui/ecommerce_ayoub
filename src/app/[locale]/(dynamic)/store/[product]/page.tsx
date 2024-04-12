@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import Newsletter from "@/components/Newsletter/Newsletter";
 import OrderForm from "@/components/OrderForm/OrderForm";
 
+// fix err
 const productData = {
   id: 1,
   name_fr: "Shampoing Pantene Pro-V Miracles Lift & Volume",
