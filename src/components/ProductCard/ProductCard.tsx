@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import { Link } from "@/navigation";
 import Image from "next/image";
-import { language, currency } from "@/elements/GlobalFunc";
+import { language, currency, backendUrl } from "@/elements/GlobalFunc";
 import { productCard } from "@/interfaces/productCard";
 
 const productVariant = {
@@ -29,6 +29,7 @@ const ProductCard = ({
       controllers.start("animateTo");
     }
   }, [inView, controllers]);
+  const image = `${backendUrl}/${pr.image}`;
   return (
     <motion.div
       ref={ref}
@@ -48,7 +49,9 @@ const ProductCard = ({
         )}
         <div className="w-full z-0 rounded h-48 sm:h-64 overflow-hidden">
           <Image
-            src={pr.image}
+            src={image}
+            width={500}
+            height={500}
             alt={language(pr.name_fr, pr.name_ar)}
             className="w-full h-48 sm:h-64 rounded scale-100 object-cover object-center hover:scale-105 transition-all ease-in-out duration-1000"
           />
